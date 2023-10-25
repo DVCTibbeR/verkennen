@@ -1,0 +1,11 @@
+Met welke query kun je zien welke minimale snelheid de dieren hebben?
+SELECT MIN(speed) AS min_speed FROM animal
+
+Met welke query kun je zien wat de snelheid is van het snelste dier?
+SELECT MAX(speed) AS max_speed FROM animal
+
+Met welke query kun je laten zien wat de minimale attack van een wapen is?
+SELECT MIN(attack) AS min_attack FROM weapon
+
+Met welke query kun je laten zien hoeveel het duurste wapen kost?
+SELECT MAX(price) AS max_price FROM weapon

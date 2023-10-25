@@ -1,0 +1,5 @@
+Met welke query (icm een subselelect) kun je de steden laten zien die vallen in regios North en South Groval?
+SELECT * FROM city WHERE region = (SELECT id FROM region WHERE name = "South Groval") OR region = (SELECT id FROM region WHERE name = "North Groval")
+
+Met welke query (icm een subselelect) kun je de dieren laten zien die captian america bezit?
+SELECT * FROM animal WHERE owner = (SELECT id FROM person WHERE name = "Captain America")

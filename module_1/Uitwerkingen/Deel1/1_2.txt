@@ -1,0 +1,14 @@
+Maak een query die alleen de persoon met id 7 laat zien
+SELECT id FROM person WHERE id = 7
+
+Bij welke opdracht(en) krijg je geen geld?
+SELECT * FROM quest WHERE gold = 0
+
+Met welke query laat je alleen de steden uit regio 1 zien?
+SELECT * FROM city WHERE region = 1
+
+Met welke query laat je alleen de schapen zien die er in database te vinden zijn?
+SELECT * FROM animal WHERE type = 'Sheep'
+
+Met welke query kan je nagaan welke dieren zijn gevangen als huisdier?
+SELECT * FROM animal WHERE owner > 0

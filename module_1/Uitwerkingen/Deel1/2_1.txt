@@ -1,0 +1,23 @@
+Hoeveel opdrachten geven je meer dan 3000 ervaringspunten?
+SELECT * FROM quest WHERE experience > 3000
+
+Met welke query kun je de personen laten zien die meer dan 1800 goud hebben?
+SELECT * FROM person WHERE gold > 1800
+
+Met welke query kun je de personen laten zien die minder dan 1850 goud hebben?
+SELECT * FROM person WHERE gold < 1850
+
+Met welke query kun je de personen laten zien die 1300 of meer goud hebben?
+SELECT * FROM person WHERE gold >= 1300
+
+Met welke query kun je de wapens laten zien die minder dan 300 kosten?
+SELECT * FROM weapon WHERE price < 300
+
+Met welke query kan je nagaan welke opdracht meer geld dan ervaring uitgeeft?
+SELECT * FROM quest WHERE gold > experience
+
+Met welke query vraag je de namen van de wezens op die gewond zijn?
+SELECT * FROM creature WHERE health < max_health
+
+Met welke query kun je alle dieren laten zien behalve de schapen?
+SELECT * FROM animal WHERE type != "Sheep"

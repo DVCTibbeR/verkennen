@@ -1,0 +1,17 @@
+Met welke query kun je de creatures laten zien die voldoen aan ‘Killer Bee’ of ‘Orc’?
+SELECT * FROM creature WHERE name = "Killer Bee" OR name = "Orc"
+
+Met welke query kun je de dieren laten zien die voldoen aan snelheid 6 en verdediging 5?
+SELECT * FROM animal WHERE speed >= 6 AND defense >= 5
+
+Met welke query kun je het aantal dieren laten zien die voldoen aan ‘Wolf’ of ‘Bear’ of ‘Eagle’
+SELECT * FROM animal WHERE type = "Wolf" OR type = "Bear" OR type = "Eagle"
+
+Met welke query kun je bepalen welke tijger het snelst is?
+SELECT * FROM animal WHERE type = "Tiger" ORDER BY speed ASC LIMIT 1
+
+Met welke query kun je de personen laten zien waarvoor geldt attack, defense en agility voor alle drie de waarde gelijk aan 10?
+SELECT * FROM person WHERE attack = 10 AND defense = 10 AND agility = 10
+
+Met welke query kun je alle hero’s laten zien met intelligence anders dan 30 of 90?
+SELECT * FROM hero WHERE intelligence != 30 AND intelligence != 90

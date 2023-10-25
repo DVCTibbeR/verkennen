@@ -1,0 +1,14 @@
+Hoeveel personen zijn NPC’s?
+SELECT COUNT(id) AS person_amount FROM npc
+
+Hoeveel dieren zijn er in RubyQuest?
+SELECT COUNT(id) AS animal_amount FROM animal
+
+Hoeveel steden zijn er aanwezig?
+SELECT COUNT(id) AS city_amount FROM city
+
+Met welke query kan je zien hoeveel schapen er in RubyQuest te vinden zijn?
+SELECT COUNT(id) AS sheep_amount FROM animal WHERE type = "Sheep"
+
+Hoeveel zeeslangen zijn er te vinden in RubyQuest?
+SELECT COUNT(id) AS seasnake_amount FROM animal WHERE type "Sea Snake"

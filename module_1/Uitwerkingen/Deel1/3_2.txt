@@ -1,0 +1,8 @@
+Met welke query kun je de wapens laten zien met een prijs van 100 – 1000?
+SELECT * FROM weapon WHERE price BETWEEN 100 AND 1000
+
+Met welke query kun je de wapens laten zien met een attack van 300 – 600?
+SELECT * FROM weapon WHERE attack BETWEEN 300 AND 600
+
+Met welke query kun je het aantal dieren zien die een defense hebben van 7 – 9?
+SELECT * FROM animal WHERE defense BETWEEN 7 AND 9
