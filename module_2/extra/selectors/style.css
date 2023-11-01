@@ -1,0 +1,27 @@
+body > p {
+
+}
+
+body > section {
+
+}
+
+body > section > p {
+
+}
+
+body > section > p[title] {
+
+}
+
+body > section > div {
+
+}
+
+body > section > div > p {
+
+}
+
+body > p[title="last"] {
+
+}
