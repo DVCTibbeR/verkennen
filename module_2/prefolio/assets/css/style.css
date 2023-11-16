@@ -81,3 +81,16 @@ section a {
 	font-size: 12px;
 	color: #afafaf;
 }
+
+@media (min-width: 1px) {
+	nav {
+		justify-content: end;
+	}
+}
+
+
+@media (min-width: 768px) {
+	nav {
+		justify-content: start;
+	}
+}
