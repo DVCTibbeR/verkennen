@@ -1,0 +1,60 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container>*{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+}
+
+@media screen and (min-width : 768px){
+
+  .grid-container{
+    
+  }
+
+  .grid-container>header{ 
+    
+  }
+  .grid-container>nav{
+    
+  }
+  .grid-container>footer{
+    
+  }
+  .grid-container>section{
+    
+  }
+  .grid-container>aside {
+    
+  }
+
+}
+
+@media screen and (min-width : 992px){
+
+  .grid-container{
+    
+  }
+
+  .grid-container>header{ 
+    
+  }
+  .grid-container>nav{
+    
+  }
+  .grid-container>footer{
+    
+  }
+  .grid-container>section{
+    
+  }
+  .grid-container>aside {
+   
+  }
+}
