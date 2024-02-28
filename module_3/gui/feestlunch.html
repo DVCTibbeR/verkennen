@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Feestlunch</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<h1>Feestlunch</h1>
+		<form id="form">
+			<p>
+				<label>Aantal croissants: </label>
+				<input type="number" min="0" name="input_num_croissants" id="input_num_croissants">
+			</p>
+			<p>
+				<label>Aantal stokbrooden: </label>
+				<input type="number" min="0" name="input_num_baguettes" id="input_num_baguettes">
+			</p>
+			<p>
+				<label>Aantal kortingsbonnen: </label>
+				<input type="number" min="0" max="9" name="input_num_coupons" id="input_num_coupons">
+			</p>
+			<input type="submit" id="submit_button" value="berekenen">
+		</form>
+		<div id="result">
+			<h1>Bonnetje</h1>
+			<p><label>Croissants: </label><span id="detail_croissants"></span></p>
+			<p><label>Stokbrooden: </label><span id="detail_baguettes"></span></p>
+			<p><label>Kortingsbonnen: </label><span id="detail_coupon"></span></p>
+			<p><label>Totaal: </label><span id="detail_total"></span></p>
+		</div>
+
+		<script>
+			const PRICE_CROISSANT = 47;
+			const PRICE_BAGUETTE = 192;
+			const VALUE_COUPON = 25;
+
+			function submit(event) {
+				const NUM_CROISSANTS = input_num_croissants.value;
+				const NUM_BAGUETTES = input_num_baguettes.value;
+				const NUM_COUPONS = input_num_coupons.value;
+
+				if (NUM_BAGUETTES && NUM_BAGUETTES && NUM_COUPONS) {
+					const TOTAL_CROISSANTS = NUM_CROISSANTS * PRICE_CROISSANT;
+					const TOTAL_BAGUETTES = NUM_BAGUETTES * PRICE_BAGUETTE;
+					const TOTAL_COUPONS = NUM_COUPONS * VALUE_COUPON;
+
+					detail_croissants.innerHTML = `<i>${NUM_CROISSANTS}x</i> ${TOTAL_CROISSANTS / 100} euro`;
+					detail_baguettes.innerHTML = `<i>${NUM_BAGUETTES}x</i> ${TOTAL_BAGUETTES / 100} euro`;
+					detail_coupon.innerHTML = `<i>${NUM_COUPONS}x</i> ${TOTAL_COUPONS / 100} euro`;
+					detail_total.innerHTML = `${(TOTAL_BAGUETTES + TOTAL_CROISSANTS - TOTAL_COUPONS) / 100} euro`;
+				}
+			}
+			submit_button.addEventListener('click', submit);
+
+			
+			function form_submit(event) {
+				event.preventDefault();
+			}
+			form.addEventListener('submit', form_submit)
+
+		</script>
+	</body>
+</html>

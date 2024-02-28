@@ -1,0 +1,52 @@
+#container{
+    margin: 20px auto;
+    width: 330px;
+}
+
+#cookie-jar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px 10px;
+    background-color: azure;
+    border: 5px solid black;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top: 0;
+    height: 310px;
+}
+
+.cookie{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAmCAIAAABh6d1TAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5wwGDwYb8G0aEAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAjSURBVBjTY7y1VIGBgYGJgYGBRhTj////KTeF5fYyRdq6EwBjGAaLhGOcEwAAAABJRU5ErkJggg==');
+    background-position: center;
+    border: 3px solid brown;
+    border-radius: 8px;
+    display: inline-block;
+    width: 300px;
+    padding: 4px;
+    text-align: center;
+    margin: 2px 0;
+    align-self: flex-end;
+    position: relative;
+    height: 38px;
+}
+
+#controls{
+    margin-top: 8px;
+    text-align: center;
+}
+
+#controls button{
+    margin: 0 3px;
+}
+
+#jar-lit{
+    height: 20px;
+}
+
+#jar-lit.closed{
+    background-color: black;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}

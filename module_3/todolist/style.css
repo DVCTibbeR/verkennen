@@ -1,0 +1,23 @@
+.container{
+    margin-top: 20px;
+    width: 400px;
+}
+
+li.list-group-item{
+    cursor: pointer;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+li.list-group-item .item-icon{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+li.list-group-item .trash{
+    position: absolute;
+    pointer-events: all;
+    right: 10px;
+    top: 12px;
+}

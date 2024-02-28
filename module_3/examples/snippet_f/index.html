@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Snippet F</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			#dalert-btn{
+				position: relative;
+			}
+			#dalert-btn:after{
+				position: absolute;
+				top: 40px;
+				left: 0;
+				content: attr(data-msg);
+				color: var(--bs-orange);
+				width: 300px;
+				text-align: left;
+			}	
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>data-* attributes</h1>
+			<div class="row">
+				<div class="col">
+					<h2>Lezen en schrijven van data-* attributes</h2>
+					<button type="button" class="btn btn-primary" id="data-btn">Set other button data-msg</button><br>
+					<button type="button" class="btn btn-primary mt-2" id="dalert-btn" data-msg="Dankjewel dat je op me hebt geklikt">Alert data-msg</button>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

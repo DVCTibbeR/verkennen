@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Snippet D</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Parents, siblings & children</h1>
+			<div class="row">
+				<div class="col-6">
+					<h2>Parent element</h2>
+					<button type="button" class="btn btn-primary" id="parent-btn">Color parent</button>
+				</div>
+				<div class="col-6">
+					<h2>Siblings Elements</h2>
+					<span>Previous<br/></span>
+					<button type="button" class="btn btn-primary" id="previous-sibling-btn">Color previous</button><br/>
+					<button type="button" class="btn btn-primary mt-2" id="next-sibling-btn">Color next</button>
+					<span><br/>Next</span>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-4">
+					<h2>Element with Children</h2>
+					<ul>
+						<li>Het eerste element</li>
+						<li>De meervoud van child is niet childs</li>
+						<li>Het middelste element</li>
+						<li>Nog een element</li>
+						<li>De vierde en laatste element</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h2>Manipulate children</h2>
+					<button type="button" class="btn btn-primary" id="rfchild-btn">Remove first child</button><br/>
+					<button type="button" class="btn btn-primary mt-2" id="rlchild-btn">Remove last child</button><br/>
+					<button type="button" class="btn btn-primary mt-2" id="rachildren-btn">Remove all children</button><br/>
+					<button type="button" class="btn btn-primary mt-2" id="ibefore-btn">Insert before first</button><br/>
+					<button type="button" class="btn btn-primary mt-2" id="iafter-btn">Insert after last</button>
+				</div>
+				<div class="col-4">
+					<h2>Children info</h2>
+					<p id="children"></p>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

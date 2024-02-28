@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Speeldaghal</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<h1>Speelhaldag</h1>
+		<form id="form">
+			<p>
+				<label>Aantal spelers: </label>
+				<input type="number" min="0" name="input_num_players" id="input_num_players">
+			</p>
+			<p>
+				<label>Aantal spelers in VIP seat: </label>
+				<input type="number" min="0" name="input_num_vip" id="input_num_vip">
+			</p>
+			<p>
+				<label>Aantal minuten in VIP seat: </label>
+				<input type="number" min="0" name="input_time_vip" id="input_time_vip">
+			</p>
+			<input type="submit" id="submit_button" value="berekenen">
+		</form>
+		<div id="result">
+			<h1>Result</h1>
+			<p><label>Toegang: </label><span id="detail_entry"></span></p>
+			<p><label>VIP Periodes: </label><span id="detail_vip_periods"></span></p>
+			<p><label>VIP (p.p.): </label><span id="detail_vip_price"></span></p>
+			<p><label>VIP Totaal: </label><span id="detail_vip_total"></span></p>
+			<p><label>Totaal: </label><span id="detail_total"></span></p>
+		</div>
+
+		<script>
+			const PRICE_ENTRY = 1245;
+			const VIP_TIME = 5;
+			const PRICE_VIP = 65;
+
+			function submit(event) {
+				const NUM_ENTRY = input_num_players.value;
+				const NUM_VIP = input_num_vip.value;
+				const NUM_VIP_TIME = input_time_vip.value;
+
+				if (NUM_ENTRY && NUM_VIP && NUM_VIP_TIME) {
+					const TOTAL_ENTRY = NUM_ENTRY * PRICE_ENTRY;
+					const VIP_PERIODS = Math.ceil(NUM_VIP_TIME / VIP_TIME);
+					const VIP_PRICE_PP = VIP_PERIODS * PRICE_VIP;
+					const VIP_TOTAL = NUM_VIP * VIP_PRICE_PP;
+					const TOTAL = (TOTAL_ENTRY + VIP_PERIODS + VIP_PRICE_PP + VIP_TOTAL) / 100; 
+				
+					console.log(VIP_PRICE_PP);
+					
+					detail_entry.innerHTML = `<i>${NUM_ENTRY}x</i> ${TOTAL_ENTRY / 100} euro`;
+					detail_vip_periods.innerHTML = `<i>${VIP_PERIODS}x</i>`;
+					detail_vip_price.innerHTML = `<i>${NUM_VIP}x</i> ${VIP_PRICE_PP / 100} euro`;
+					detail_vip_total.innerHTML = `${VIP_TOTAL / 100} euro`;
+					detail_total.innerHTML = `${TOTAL} euro`;	
+				}
+			}
+			submit_button.addEventListener('click', submit);
+
+			
+			function form_submit(event) {
+				event.preventDefault();
+			}
+			form.addEventListener('submit', form_submit)
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container-fluid {
+            width: 80%
+        }
+
+        #small-images div img {
+            max-width: 100%;
+            max-height: 200px;
+            cursor: pointer;
+        }
+
+        #frame {
+            display: inline-block;
+            background: white;
+            border: 5px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 100%;
+        }
+
+        #big-image-element {
+            max-width: 100%;
+        }
+
+        #big-image-title {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">My Gallery</h1>
+        <div class="row bg-light border border-secondary rounded-top">
+            <div class="col text-center py-4" id="big-image">
+                <div id="frame" class="d-none">
+                    <img src="" id="big-image-element">
+                    <h2 id="big-image-title"></h2>
+                    <small id="big-image-text"></small>
+                </div>
+                <h2 id="big-image-none">Kies een foto</h2>
+            </div>
+        </div>
+        <div class="row bg-light border border-secondary rounded-bottom" id="small-images">
+            <div class="col-2 text-center py-2">
+                <img data-title="Rocks" data-text="Deze mooie rots heeft zich over miljoenen jaren zo gevormd." data-img="images/big_rock_shape.jpeg" src="images/small_rock_shape.png">
+            </div>
+            <div class="col-2 text-center py-2">
+                <img data-title="Zebra" data-text="Zebrastrepen zijn uniek, net als vingerafdrukken." data-img="images/big_zebra_stripes.jpeg" src="images/small_zebra_stripes.png">
+            </div>
+            <div class="col-2 text-center py-2">
+                <img data-title="Ice" data-text="Ongeveer 10% van het landoppervlak van de wereld en ongeveer 7% van de oceanen zijn bedekt met ijs." data-img="images/big_ice_on_sand.jpeg" src="images/small_ice_on_sand.png">
+            </div>
+            <div class="col-2 text-center py-2">
+                <img data-title="Cassette Tape" data-text="Het enige dat je nog nodig hebt is een potlood." data-img="images/big_cas_tap.jpeg" src="images/small_cas_tap.png">
+            </div>
+            <div class="col-2 text-center py-2">
+                <img data-title="House" data-text="“Home is a shelter from storms — all sorts of storms.” — William J. Bennett, former U.S. Secretary of Education" data-img="images/big_house_and_storm.jpeg" src="images/small_house_and_storm.png">
+            </div>
+            <div class="col-2 text-center py-2">
+                <img data-title="Paint" data-text="Ingezoomde foto van een bekend schilderij." data-img="images/big_brush_strokes.jpeg" src="images/small_brush_strokes.png">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
